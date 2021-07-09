@@ -33,7 +33,7 @@ class FunctionPacks extends PluginBase {
         foreach(explode("\n", $this->functions[$args[0]]) as $function) {
             $function = str_replace("%player", $sender->getName(), $function);
             foreach(array_slice($args, 1) as $i => $arg)
-                $function = str_replace("%".($i-1), $arg, $function);
+                $function = str_replace("%".$i, $arg, $function);
             Server::getInstance()->dispatchCommand($sender, $function);
         }
         return true;
