@@ -21,14 +21,14 @@ class FunctionPacks extends PluginBase {
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
-        if($command->getName() != "function" || !$sender->hasPermission($command->getPermission())) return false;
+        if($command->getName() != "function" || !$sender->hasPermission($command->getPermission())) return true;
         if(!isset($args[0])) {
             $sender->sendMessage($command->getUsage());
-            return false;
+            return true;
         }
         if(!isset($this->functions[$args[0]])) {
             $sender->sendMessage("Function not found!");
-            return false;
+            return true;
         }
         foreach(explode("\n", $this->functions[$args[0]]) as $function) {
             $function = str_replace("%player", $sender->getName(), $function);
