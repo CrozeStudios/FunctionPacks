@@ -1,0 +1,17 @@
+---
+name: FunctionPacks
+version: 1.0.0
+api: 3.0.0
+main: OguzhanUmutlu\FunctionPacks\FunctionPacks
+
+commands:
+  function:
+    description: "Runs a function."
+    permission: function.cmd
+    usage: "/function <function: string> <args...>"
+
+permissions:
+  function.cmd:
+    description: "Runs a function."
+    default: op
+...
