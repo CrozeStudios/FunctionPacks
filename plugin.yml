@@ -7,7 +7,7 @@ main: OguzhanUmutlu\FunctionPacks\FunctionPacks
 commands:
   function:
     description: "Runs a function."
-    permission: function.cmd
+    permission: functionpacks.cmd
     usage: "/function <function: string> <args...>"
 
 permissions:
