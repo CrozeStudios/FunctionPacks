@@ -11,7 +11,7 @@ commands:
     usage: "/function <function: string> <args...>"
 
 permissions:
-  function.cmd:
+  functionpacks.cmd:
     description: "Runs a function."
     default: op
 ...
