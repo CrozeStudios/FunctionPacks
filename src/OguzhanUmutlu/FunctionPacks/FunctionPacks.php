@@ -17,7 +17,6 @@ class FunctionPacks extends PluginBase {
             if($file != "." && $file != "..")
                 $this->functions[implode(".", array_slice(explode(".", $file), 0, count(explode(".", $file))-1))] = file_get_contents($dir."\\".$file);
         }
-        $this->getLogger()->notice("Loaded ".count($this->functions)." functions: ".implode(", ", array_keys($this->functions)));
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
